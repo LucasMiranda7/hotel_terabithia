@@ -1,7 +1,9 @@
 package classes.menu
 
+import classes.cadastro.Cadastro
+import classes.quartos.Diarias
 
-class Menu(private val validaUsuario: ValidaUsuario) {
+class Menu(private val validaUsuario: ValidaUsuario, private val cadastro: Cadastro) {
 
     fun menu() { //é um metodo
 
@@ -9,7 +11,7 @@ class Menu(private val validaUsuario: ValidaUsuario) {
 
         val escolha = readln().toIntOrNull()
         when (escolha) {
-            1 -> println(1)
+            1 -> cadastro.cadastrarHospedes()
 
             else -> erro()
         }
